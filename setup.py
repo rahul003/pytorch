@@ -343,10 +343,10 @@ def build_libs(libs):
         else:
             my_env['CMAKE_GENERATOR'] = ''
             my_env['CMAKE_INSTALL'] = 'make install'
-    if USE_SYSTEM_NCCL:
-        my_env["NCCL_ROOT_DIR"] = NCCL_ROOT_DIR
-        my_env["NCCL_INCLUDE_DIR"] = NCCL_INCLUDE_DIR
-        my_env["NCCL_SYSTEM_LIB"] = NCCL_SYSTEM_LIB
+#    if USE_SYSTEM_NCCL:
+ #       my_env["NCCL_ROOT_DIR"] = '/home/ec2-user/aws-ofi-nccl/'
+  #      my_env["NCCL_INCLUDE_DIR"] = '/home/ec2-user/aws-ofi-nccl/include/'
+   #     my_env["NCCL_SYSTEM_LIB"] = 
     if USE_CUDA:
         my_env["CUDA_BIN_PATH"] = CUDA_HOME
         build_libs_cmd += ['--use-cuda']
